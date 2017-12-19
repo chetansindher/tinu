@@ -1,0 +1,38 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: D:\virtual\kompose.exe convert
+    kompose.version: 1.6.0 (e4adfef)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: application
+  name: application
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        io.kompose.service: application
+    spec:
+      containers:
+      - args:
+        - node
+        - /src/bin/www
+        image: chetansindhe/application:kubeint
+        name: application
+        ports:
+        - containerPort: 3000
+        resources: {}
+        volumeMounts:
+        - mountPath: /src
+          name: application-claim0
+      restartPolicy: Always
+      volumes:
+      - name: application-claim0
+        persistentVolumeClaim:
+          claimName: application-claim0
+status: {}
