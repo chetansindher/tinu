@@ -34,7 +34,8 @@ app.post('/tinu', function (req, res) {
       } else {
         //create a new url
         var newUrl = Url({
-          tinu: longUrl
+          tinu: longUrl,
+          created: new Date()
         });
 
         // save the new url

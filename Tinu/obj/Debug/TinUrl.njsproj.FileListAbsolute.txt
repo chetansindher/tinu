@@ -1,0 +1,2 @@
+C:\Users\chethansindhie\Documents\Visual Studio 2015\Projects\Tinu\obj\Debug\TinUrl.njsprojResolveAssemblyReference.cache
+C:\Users\chethansindhie\Documents\Visual Studio 2015\Projects\Tinu\bin\Microsoft.NodejsTools.WebRole.dll
